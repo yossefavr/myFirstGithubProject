@@ -1,0 +1,94 @@
+.list-img{
+    width: 150px;
+    height:100px;
+}   
+.list-img-td{
+    height: 100px;
+}
+body{
+    align-content: right;
+    direction: rtl;
+    text-align: right;
+}
+#main-div{
+    width:1000px;   
+    margin : auto;
+    padding-bottom: 50  px;
+    background-color: brown;
+}
+#header-div{
+    width: 1000px; 
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 4px 4px 4px #aaa;
+    height: 100px;
+    margin : auto;
+    background-color: brown;
+  
+}
+#person-name-div{
+    float: right;
+    margin-right: 10px;
+}
+#blue{
+    background: blue;
+    width: 300px;
+    height: 50px;
+    float: left;
+    margin-left:25px;
+    margin-top:25px;
+}
+#family-collage-div{
+    width:1000px;
+    height: 200px;
+    margin : auto;
+    background-color: brown;
+    background-image: URL("/images/family_collage.jpg");
+}
+#members-list-div{
+    width:600px;
+    margin : auto;
+}
+#family-collage-img{
+    width: 600px;
+    height: 100%;
+    display:block;
+    margin:auto;
+}
+#members-list-table{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+.edit-mode{
+    display:none;
+    width:100%;
+}
+.normal-mode{
+    display:initial;
+    width:100%
+}
+table, th, td{
+    border:1px solid black;
+}
+
+th,td{
+    padding:6px;
+}
+p{
+    margin:0;
+    font-size: 18px;
+}
+#personal-details-div{
+    padding-right: 150px;
+    margin-top:50px;
+}
+
+#personal-details-table{
+    width: 300px;
+}
+
+#change-mode-btn{
+    width:300px;
+    height:50px;
+}

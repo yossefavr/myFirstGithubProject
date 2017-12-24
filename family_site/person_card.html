@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>familyMember</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css"> 
+    <script>
+        function change_mode(){
+            var x = document.getElementsByClassName("edit-mode");
+            var y = document.getElementsByClassName("normal-mode");
+            var i;
+            var display_mode;
+            var btn = document.getElementById("change-mode-btn");
+            if (btn.value=="Edit"){
+                var normal_mode = "none";
+                var edit_mode = "initial";
+                btn.value = "Save";
+                for (i = 0; i < x.length; i++) {
+                    x[i].value = y[i].innerHTML;
+                }
+            }
+            else{
+                var normal_mode = "initial";
+                var edit_mode = "none";
+                btn.value = "Edit";
+                for (i = 0; i < x.length; i++) {
+                    y[i].innerHTML = x[i].value;
+                }
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = edit_mode;
+                y[i].style.display = normal_mode;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="main-div">
+        <div id="header-div">
+           <div id="person-name-div">דורון</div>
+            <div id="blue"><p>works better in chrom</p></div>
+        </div>
+
+        
+        <div id="family-collage-div">
+                <img id="family-collage-img" src="images/family_collage.jpg" alt="">
+        </div>
+<div id="personal-details-div">
+    <br>
+    <table id="personal-details-table">
+        
+        <tr>
+            <th>שם</th>
+            <td><p class="normal-mode">דורון</p>
+                <input type="text" id="private-name" class="edit-mode">
+            </td>
+        </tr>   
+        <tr>   
+            <th>עיסוק</th>
+            <td><p class="normal-mode">מורה בגמלאות</p>
+                <input type="text" id="ocupation" class="edit-mode">
+            </td>
+        </tr>
+        <tr>    
+            
+            <th>כתובת</th>
+            <td><p class="normal-mode">באר שבע</p>
+                <input type="text" id="address" class="edit-mode"/>
+            </td>
+        </tr>
+        <tr>  
+            <th>אימייל</th>
+            <td><p class="normal-mode">doronavr@gmail.com</p>
+                <input type="text" id="email" class="edit-mode">
+            </td>
+        </tr>
+        <tr>    
+            <th>תאריך לידה</th>
+            <td><p class="normal-mode">תאריך לידה</p>
+                <input type="text" id="birth-day" class="edit-mode">
+            </td>
+        </tr>
+        </table>
+        <input type="button" id="change-mode-btn" value = "Edit" onclick="change_mode()">
+    </div>
+</body>
+</html>
